@@ -89,10 +89,22 @@ $("#password").css('border','1px solid red');
 if(fname=="" || lname=="" || emailphonenumber=="" || password==""){
 
 document.getElementById('errormessage').innerHTML = "Please Attend to the Errors Highligted Below"
-
+$("#errormessage").append('<div id="close" style="float:left;margin-left:10px;border-radius:12px;border:0px solid #fff;font-weight:bold;width:25px;height:25px;font-size:10px; cursor:pointer" align="center">X</div>');
 $('#errormessage').addClass('error');
 
+
 }
+
+$("#close").click(function(){
+
+
+document.getElementById('errormessage').innerHTML = "";
+$('#errormessage').removeClass('error');
+
+
+
+
+})
 
 })
 
